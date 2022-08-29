@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Sresult from "./Sresult";
 
-function App() {
+const App = () => {
+  const [type, settype] = useState("");
+  const InputEvent = (e) => {
+    const data = e.target.value;
+    settype(data);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="textcenter">
+      <h1>Search Anything</h1>
+      <br />
+      <input
+        type={"text"}
+        placeholder="Search"
+        onChange={InputEvent}
+        value={type}
+      ></input>
+      <Sresult name={type} />
     </div>
   );
-}
+};
 
 export default App;
