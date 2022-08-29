@@ -17,7 +17,7 @@ const App = () => {
         onChange={InputEvent}
         value={type}
       ></input>
-      <Sresult name={type} />
+      {type === "" ? null : <Sresult name={type} />}
     </div>
   );
 };
