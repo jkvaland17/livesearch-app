@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="textcenter">
       <input
-        type={"text"}
+        type="text"
         placeholder="Search"
         onChange={InputEvent}
         value={type}
