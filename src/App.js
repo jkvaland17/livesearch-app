@@ -9,8 +9,6 @@ const App = () => {
   };
   return (
     <div className="textcenter">
-      <h1>Search Anything</h1>
-      <br />
       <input
         type={"text"}
         placeholder="Search"
